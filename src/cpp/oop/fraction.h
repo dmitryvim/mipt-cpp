@@ -12,9 +12,13 @@ private:
 public:
     fraction(int, int);
 
+    ~fraction();
+
     int get_nominator();
 
     int get_denominator();
+
+    fraction plus(fraction);
 
     double value();
 
