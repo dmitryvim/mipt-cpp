@@ -8,14 +8,15 @@
 
 class Time {
 private:
-    int hour;
-    int minute;
-    int second;
+    int time_seconds;
 
-    void format_values();
+    int hour();
 
+    int minute();
+
+    int second();
 public:
-    Time(int hour = 0, int minute = 0, int second = 0);;
+    Time(int = 0, int = 0, int = 0);
 
     void print();
 
