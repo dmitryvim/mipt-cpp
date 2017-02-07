@@ -2,15 +2,17 @@
 // Created by dmitry on 2/7/17.
 //
 
-#include "fraction.h"
+#include "Time.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    fraction a(1, 3), b(4, 6);
+    Time a(12, 35), b(10, 33, 45);
     a.plus(b).print();
-    cout << "hello" << endl;
+    a.minus(b).print();
+    b.plus(a).print();
+    b.minus(a).print();
     return 0;
 }
 
