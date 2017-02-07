@@ -5,3 +5,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 add_executable(cstring src/cpp/cstring/readstring.cpp)
 add_executable(constructor src/cpp/constructor/constructor.cpp)
+add_executable(oop src/cpp/oop/oop.cpp)
