@@ -28,13 +28,8 @@ namespace mipt {
         int get_size() const;
 
         int get(int index) const;
-//        void set(int index, int value);
-//        int_array sub_array(int start, int finish);
-//        void resize(int size);
-//        int_array revert();
-//        int max();
-//        int min();
-//        friend int_array concat(const int_array &a, const int_array &b);
+
+        friend int max(int_array);
     };
 }
 

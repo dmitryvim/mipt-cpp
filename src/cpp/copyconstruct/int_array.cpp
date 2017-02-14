@@ -50,3 +50,13 @@ int mipt::int_array::get_size() const {
 int mipt::int_array::get(int index) const {
     return this->values[index];
 }
+
+int mipt::max(mipt::int_array a) {
+    int result = a.values[0];
+    for (int i = 1; i < a.size; ++i) {
+        if (result < a.values[i]) {
+            result = a.values[i];
+        }
+    }
+    return 0;
+}
