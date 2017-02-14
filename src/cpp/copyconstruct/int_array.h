@@ -5,18 +5,37 @@
 #ifndef MIPT_CPP_ARRAY_H
 #define MIPT_CPP_ARRAY_H
 
-class int_array {
-private:
-    int *values;
-    int size;
-public:
-    int_array(const int size);
+#include <string>
 
-    int_array(const int_array &that);
+namespace mipt {
 
-    ~int_array();
+    class int_array {
+    private:
+        int *values;
+        int size;
 
-    void print();
-};
+        void log(std::string);
+
+    public:
+        int_array(const int size);
+
+        int_array(const int_array &that);
+
+        ~int_array();
+
+        void print() const;
+
+        int get_size() const;
+
+        int get(int index) const;
+//        void set(int index, int value);
+//        int_array sub_array(int start, int finish);
+//        void resize(int size);
+//        int_array revert();
+//        int max();
+//        int min();
+//        friend int_array concat(const int_array &a, const int_array &b);
+    };
+}
 
 #endif //MIPT_CPP_ARRAY_H

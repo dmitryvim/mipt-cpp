@@ -1,15 +1,18 @@
 //
 // Created by dmitry on 2/14/17.
 //
-#include <iostream>
 #include "int_array.h"
+#include "float_array.h"
 
-using namespace std;
+using namespace mipt;
 
 int main() {
-    int_array a(5);
+    int_array a = 12;
     int_array b = a;
+    float_array f = a;
+    float_array f1 = 2.71828;
+
     a.print();
-    b.print();
+    f1.print();
     return 0;
 }

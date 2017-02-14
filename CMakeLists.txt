@@ -17,4 +17,6 @@ add_executable(oop
 add_executable(copyconstruct
         src/cpp/copyconstruct/lesson3.cpp
         src/cpp/copyconstruct/int_array.cpp
-        src/cpp/copyconstruct/int_array.h)
+        src/cpp/copyconstruct/int_array.h
+        src/cpp/copyconstruct/float_array.cpp
+        src/cpp/copyconstruct/float_array.h)
