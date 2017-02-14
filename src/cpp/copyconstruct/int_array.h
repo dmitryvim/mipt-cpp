@@ -30,6 +30,10 @@ namespace mipt {
         int get(int index) const;
 
         friend int max(int_array);
+
+        int_array operator+(const int_array &);
+
+        int_array operator+(const int &);
     };
 }
 
