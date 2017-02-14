@@ -82,3 +82,22 @@ mipt::int_array mipt::int_array::operator+(const int &value) {
     result.values[this->size] = value;
     return result;
 }
+
+namespace mipt {
+    int_array operator+(const int &value, const mipt::int_array &that) {
+        int_array result(that.size + 1);
+        for (int i = 0; i < that.size; ++i) {
+            result.values[i + 1] = that.values[i];
+        }
+        result.values[0] = value;
+        return result;
+    }
+
+    int_array &int_array::operator++(int) {
+        int_array old(*this);
+        for (int i = 0; i < this->size; ++i) {
+            this->values[i]++;
+        }
+        return old;
+    }
+}

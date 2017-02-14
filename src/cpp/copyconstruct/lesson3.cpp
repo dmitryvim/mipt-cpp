@@ -8,6 +8,8 @@ using namespace mipt;
 int main() {
     int_array a(4);
     int_array b = a;
-    (a + b + 3).print();
+    (12 + a + b + 3).print();
+    a++;
+    a.print();
     return 0;
 }

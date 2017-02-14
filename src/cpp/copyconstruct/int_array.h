@@ -34,6 +34,10 @@ namespace mipt {
         int_array operator+(const int_array &);
 
         int_array operator+(const int &);
+
+        friend int_array operator+(const int &, const int_array &);
+
+        int_array &operator++(int);
     };
 }
 
