@@ -15,4 +15,6 @@ add_executable(oop
         src/cpp/oop/Time.h)
 
 add_executable(copyconstruct
-        src/cpp/copyconstruct/lesson3.cpp)
+        src/cpp/copyconstruct/lesson3.cpp
+        src/cpp/copyconstruct/int_array.cpp
+        src/cpp/copyconstruct/int_array.h)
