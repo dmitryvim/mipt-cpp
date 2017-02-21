@@ -20,3 +20,8 @@ add_executable(copyconstruct
         src/cpp/copyconstruct/int_array.h
         src/cpp/copyconstruct/float_array.cpp
         src/cpp/copyconstruct/float_array.h)
+
+add_executable(selfstring
+        src/cpp/selfstring/main.cpp
+        src/cpp/selfstring/string.h
+        src/cpp/selfstring/string.cpp)
