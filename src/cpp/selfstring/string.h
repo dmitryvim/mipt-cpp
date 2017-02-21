@@ -5,12 +5,15 @@
 #ifndef MIPT_CPP_STRING_H
 #define MIPT_CPP_STRING_H
 
+#include <cstring>
+#include <iostream>
+
 namespace dmitry {
 
     class String {
     private:
         char *values;
-        int capacity;
+        size_t capacity;
     public:
         String(const char *);
 
@@ -18,19 +21,15 @@ namespace dmitry {
 
         ~String();
 
-        int size() const;
+        String operator=(const char *);
 
-        bool contains(const char);
+        // 1 + str // str + 1
+        //cout << string
+        friend std::ostream &operator<<(std::ostream &, const String &);
 
-        String operator+(const String &) const;
+        operator char *() const;
 
-        String operator+(const char[]) const;
-
-        String operator+(const char) const;
-
-        friend String operator+(const char[], const String &) const;
-
-        char operator[](const int) const;
+        void print();
     };
 
 }
