@@ -7,7 +7,6 @@
 
 int main() {
     dmitry::String string = "24";
-    string.print();
     std::cout << string << std::endl;
     char *text = string;
     std::cout << text << std::endl;
