@@ -10,4 +10,6 @@ int main() {
     std::cin >> m;
     m.set(1, 0, 31415);
     std::cout << m;
+
+    std::cout << Matrix::eye(3);
 }

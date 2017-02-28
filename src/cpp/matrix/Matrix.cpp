@@ -57,3 +57,13 @@ std::istream &operator>>(std::istream &in, const Matrix &matrix) {
     }
     return in;
 }
+
+Matrix Matrix::eye(size_t count) {
+    Matrix result(count, count);
+    for (int row = 0; row < count; ++row) {
+        for (int col = 0; col < count; ++col) {
+            result.values[row][col] = (col == row);
+        }
+    }
+    return result;
+}
