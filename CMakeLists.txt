@@ -25,3 +25,8 @@ add_executable(selfstring
         src/cpp/selfstring/main.cpp
         src/cpp/selfstring/string.h
         src/cpp/selfstring/string.cpp)
+
+add_executable(matrix
+        src/cpp/matrix/main.cpp
+        src/cpp/matrix/Matrix.h
+        src/cpp/matrix/Matrix.cpp)
