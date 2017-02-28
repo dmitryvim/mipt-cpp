@@ -3,7 +3,11 @@
 //
 
 #include <iostream>
+#include "Matrix.h"
 
 int main() {
-    std::cout << "Matrix has you!\n";
+    Matrix m(2, 2);
+    std::cin >> m;
+    m.set(1, 0, 31415);
+    std::cout << m;
 }
