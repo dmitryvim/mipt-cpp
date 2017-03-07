@@ -27,7 +27,7 @@ private:
     size_t length;
     size_t capacity;
 
-    void set_capacity(size_t capacity)
+    void set_capacity(size_t capacity);
 
 public:
     ArrayList(size_t length);
