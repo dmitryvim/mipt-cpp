@@ -30,3 +30,8 @@ add_executable(matrix
         src/cpp/matrix/main.cpp
         src/cpp/matrix/Matrix.h
         src/cpp/matrix/Matrix.cpp)
+
+add_executable(extend
+        src/cpp/collection/main.cpp
+        src/cpp/collection/collection.cpp
+        src/cpp/collection/collection.h)
