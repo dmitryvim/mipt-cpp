@@ -12,7 +12,7 @@ typedef int element;
 
 class List {
 public:
-    bool contains(element e);
+    virtual bool contains(element e);
 
     virtual size_t size() = 0;
 
@@ -66,6 +66,8 @@ public:
     element get(size_t index);
 
     element pop();
+
+    bool contains(element e);
 };
 
 

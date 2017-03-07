@@ -97,6 +97,19 @@ LinkedList::~LinkedList() {
     }
 }
 
+bool LinkedList::contains(element e) {
+    std::cout << "LinkedList::contains" << std::endl;
+
+    Node *iter = this->first;
+    while (iter != 0) {
+        if (iter->value == e) {
+            return true;
+        }
+        iter = iter->next;
+    }
+    return false;
+}
+
 
 Node::Node(Node *prev, Node *next, element e) :
         prev(prev), next(next), value(e) {}

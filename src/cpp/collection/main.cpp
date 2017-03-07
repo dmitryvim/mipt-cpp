@@ -6,7 +6,7 @@
 #include "List.h"
 
 int main() {
-    List *list = new ArrayList(10);
+    List *list = new LinkedList();
 
     for (int i = 0; i < 10; ++i) {
         list->add(i * i);
