@@ -25,7 +25,8 @@ void ArrayList::add(element e) {
         element *old_values = this->values;
         size_t old_capacity = this->capacity;
         set_capacity(this->capacity * 2);
-        std::memcpy(this->values, old_values, old_capacity);
+        size_t byte_count = old_capacity * sizeof(element);
+        std::memcpy(this->values, old_values, byte_count);
         delete[]old_values;
     }
     this->values[this->length] = e;
