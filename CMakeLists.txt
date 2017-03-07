@@ -33,5 +33,5 @@ add_executable(matrix
 
 add_executable(extend
         src/cpp/collection/main.cpp
-        src/cpp/collection/collection.cpp
-        src/cpp/collection/collection.h)
+        src/cpp/collection/List.cpp
+        src/cpp/collection/List.h)
