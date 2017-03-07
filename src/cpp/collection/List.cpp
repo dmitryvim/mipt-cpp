@@ -3,6 +3,7 @@
 //
 
 #include <cstring>
+#include <iostream>
 #include "List.h"
 
 ArrayList::ArrayList(size_t length) {
@@ -40,6 +41,8 @@ element ArrayList::get(size_t index) {
 }
 
 bool List::contains(element e) {
+    std::cout << "List::contains" << std::endl;
+
     for (size_t i = 0; i < size(); ++i) {
         if (get(i) == e) {
             return true;
@@ -57,6 +60,7 @@ LinkedList::LinkedList() {
 void LinkedList::add(element e) {
     if (this->last != 0) {
         Node *node = new Node(this->last, 0, e);
+        this->last->next = node;
         this->last = node;
     } else {
         Node *node = new Node(0, 0, e);
