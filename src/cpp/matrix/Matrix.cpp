@@ -28,7 +28,7 @@ Matrix::~Matrix() {
     for (int i = 0; i < this->row_count; ++i) {
         delete[]this->values[i];
     }
-    delete[]this->values;
+    delete[] this->values;
 }
 
 matrix_cell Matrix::get(size_t row, size_t col) const {
@@ -49,7 +49,7 @@ std::ostream &operator<<(std::ostream &out, const Matrix &matrix) {
     return out;
 }
 
-std::istream &operator>>(std::istream &in, const Matrix &matrix) {
+std::istream &operator>>(std::istream &in, Matrix &matrix) {
     for (int row = 0; row < matrix.row_count; ++row) {
         for (int col = 0; col < matrix.col_count; ++col) {
             in >> matrix.values[row][col];

@@ -29,7 +29,7 @@ public:
 
     friend std::ostream &operator<<(std::ostream &, const Matrix &);
 
-    friend std::istream &operator>>(std::istream &, const Matrix &);
+    friend std::istream &operator>>(std::istream &, Matrix &);
 
     static Matrix eye(size_t);
 };
