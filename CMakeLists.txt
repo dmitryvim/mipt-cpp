@@ -35,3 +35,8 @@ add_executable(extend
         src/cpp/collection/main.cpp
         src/cpp/collection/List.cpp
         src/cpp/collection/List.h)
+
+add_executable(bigint
+        src/cpp/bigint/main.cpp
+        src/cpp/bigint/BigInteger.cpp
+        src/cpp/bigint/BigInteger.h)
