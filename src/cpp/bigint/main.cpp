@@ -15,4 +15,9 @@ int main() {
     BigInteger b2(str);
     std::cout << "constructor(char*):\n" << str << " ";
     b2.debug();
+
+    std::cout << "copy constructor:\n";
+    BigInteger b3 = b2;
+    b2.debug();
+    b3.debug();
 }

@@ -22,6 +22,8 @@ public:
 
     BigInteger(char *);
 
+    BigInteger(const BigInteger &);
+
     ~BigInteger();
 
     void debug();

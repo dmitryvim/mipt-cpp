@@ -49,3 +49,8 @@ BigInteger::BigInteger(char *string) {
         values[i] = value;
     }
 }
+
+BigInteger::BigInteger(const BigInteger &that) {
+    set_capacity(that.capacity);
+    std::memcpy(this->values, that.values, this->capacity * sizeof(int));
+}
