@@ -10,6 +10,8 @@
 class BigInteger {
 private:
     const int BASE = 1000;
+    const int DIGIT_COUNT = 3;
+
     int capacity;
     int *values = 0;
 
@@ -17,6 +19,8 @@ private:
 
 public:
     BigInteger(int);
+
+    BigInteger(char *);
 
     ~BigInteger();
 

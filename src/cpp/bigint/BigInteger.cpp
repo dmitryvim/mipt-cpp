@@ -2,6 +2,7 @@
 // Created by dmitry on 3/14/17.
 //
 
+#include <cstring>
 #include "BigInteger.h"
 
 BigInteger::BigInteger(int value) {
@@ -33,4 +34,18 @@ void BigInteger::debug() {
         std::cout << "[" << i << ":" << this->values[i] << "]";
     }
     std::cout << ")\n";
+}
+
+BigInteger::BigInteger(char *string) {
+    int len = (int) strlen(string);
+    set_capacity(len / DIGIT_COUNT + 1);
+    for (int i = 0; i < this->capacity; ++i) {
+        int value = 0;
+        for (int j = len - (i + 1) * DIGIT_COUNT; j < len - i * DIGIT_COUNT; j++) {
+            if (j >= 0) {
+                value = (value * 10) + (string[j] - '0');
+            }
+        }
+        values[i] = value;
+    }
 }
