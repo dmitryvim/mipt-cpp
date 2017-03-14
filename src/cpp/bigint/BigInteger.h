@@ -17,6 +17,7 @@ private:
 
     void set_capacity(const int);
 
+    void assign(const char *);
 public:
     BigInteger(int);
 
@@ -27,6 +28,10 @@ public:
     ~BigInteger();
 
     void debug();
+
+    friend std::ostream &operator<<(std::ostream &, const BigInteger &);
+
+    friend std::istream &operator>>(std::istream &, BigInteger &);
 };
 
 

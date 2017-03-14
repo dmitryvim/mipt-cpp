@@ -11,7 +11,7 @@ int main() {
     std::cout << "constructor(int):\n" << value << " ";
     b.debug();
 
-    char str[] = "23434567898754567890";
+    char str[] = "2343450000000000567890";
     BigInteger b2(str);
     std::cout << "constructor(char*):\n" << str << " ";
     b2.debug();
@@ -20,4 +20,12 @@ int main() {
     BigInteger b3 = b2;
     b2.debug();
     b3.debug();
+
+    std::cout << "std::cout\n";
+    std::cout << b2 << std::endl;
+    b2.debug();
+
+    std::cout << "std::cin\n please, input long value";
+    std::cin >> b2;
+    b2.debug();
 }
