@@ -40,3 +40,8 @@ add_executable(bigint
         src/cpp/bigint/main.cpp
         src/cpp/bigint/BigInteger.cpp
         src/cpp/bigint/BigInteger.h)
+
+add_executable(rational
+        src/cpp/rational/main.cpp
+        src/cpp/rational/Rational.cpp
+        src/cpp/rational/Rational.h)
