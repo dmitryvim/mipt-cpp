@@ -14,14 +14,23 @@ private:
 
     int capacity;
     int *values = 0;
+    int sign = 1;
 
     void set_capacity(const int);
 
     void assign(const char *);
-public:
-    BigInteger(int);
 
-    BigInteger(char *);
+    BigInteger abs();
+
+    static BigInteger abs_plus(const BigInteger &, const BigInteger &);
+
+    static BigInteger abs_minus(const BigInteger &, const BigInteger &);
+
+    static BigInteger abs_mult(const BigInteger &, const BigInteger &);
+public:
+    BigInteger(const int);
+
+    BigInteger(const char *);
 
     BigInteger(const BigInteger &);
 
@@ -31,7 +40,24 @@ public:
 
     friend std::ostream &operator<<(std::ostream &, const BigInteger &);
 
+    //не забыть освободить старую память
     friend std::istream &operator>>(std::istream &, BigInteger &);
+
+    ////
+    //в реализации присваивания не забываем освобождать старую память
+    BigInteger &operator=(const BigInteger &);
+
+    BigInteger &operator=(const char *);
+
+    BigInteger &operator=(const int);
+
+    ////
+
+    BigInteger operator-();
+
+    ////
+    BigInteger operator+(const BigInteger &);
+
 };
 
 

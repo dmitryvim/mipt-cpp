@@ -5,17 +5,19 @@
 #include <cstring>
 #include "BigInteger.h"
 
-BigInteger::BigInteger(int value) {
+BigInteger::BigInteger(const int value) {
     int v = BASE;
     int n = 1;
     while (v < value) {
         v *= BASE;
         n++;
     }
+
+    v = value;
     set_capacity(n);
     for (int i = 0; i < this->capacity; i++) {
-        this->values[i] = value % BASE;
-        value /= BASE;
+        this->values[i] = v % BASE;
+        v /= BASE;
     }
 }
 
@@ -36,7 +38,7 @@ void BigInteger::debug() {
     std::cout << ")\n";
 }
 
-BigInteger::BigInteger(char *string) {
+BigInteger::BigInteger(const char *string) {
     assign(string);
 }
 
@@ -78,3 +80,4 @@ void BigInteger::assign(const char *string) {
         values[i] = value;
     }
 }
+
